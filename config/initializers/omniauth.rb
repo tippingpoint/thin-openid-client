@@ -1,4 +1,4 @@
 require 'openid/store/filesystem'
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :open_id, OpenID::Store::Filesystem.new('tmp')
+  provider :open_id, OpenID::Store::Filesystem.new('tmp'), :required => [], :optional => []
 end
